@@ -19,33 +19,6 @@ namespace ThanksCardAPI.Migrations
                 .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("ThanksCardAPI.Models.Card", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<long>("Content")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("Date")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Like")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<long>("Title")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cards");
-                });
-
             modelBuilder.Entity("ThanksCardAPI.Models.Category", b =>
                 {
                     b.Property<long>("Id")
@@ -243,7 +216,13 @@ namespace ThanksCardAPI.Migrations
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("boolean");
 
+                    b.Property<string>("JapaneseName")
+                        .HasColumnType("text");
+
                     b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameRuby")
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
