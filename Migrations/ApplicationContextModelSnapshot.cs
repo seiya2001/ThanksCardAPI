@@ -46,6 +46,21 @@ namespace ThanksCardAPI.Migrations
                     b.ToTable("Cards");
                 });
 
+            modelBuilder.Entity("ThanksCardAPI.Models.Category", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorys");
+                });
+
             modelBuilder.Entity("ThanksCardAPI.Models.Class", b =>
                 {
                     b.Property<long>("Id")
@@ -84,7 +99,7 @@ namespace ThanksCardAPI.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("ThanksCardAPI.Models.Question", b =>
+            modelBuilder.Entity("ThanksCardAPI.Models.QandA_Kategory", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,6 +107,24 @@ namespace ThanksCardAPI.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QandA_Kategorys");
+                });
+
+            modelBuilder.Entity("ThanksCardAPI.Models.Question", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Mondai")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

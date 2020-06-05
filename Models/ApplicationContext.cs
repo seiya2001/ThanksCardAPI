@@ -18,5 +18,8 @@ namespace ThanksCardAPI.Models
         public DbSet<Role> Roles { get; set; }
         public DbSet<Class> Class { get; set; }
         public DbSet<Question> Questions { get; set; }
+        public DbSet<QandA_Kategory> QandA_Kategorys { get; set; }
+        public DbSet<Category> Categorys { get; set; }
+
     }
 }
