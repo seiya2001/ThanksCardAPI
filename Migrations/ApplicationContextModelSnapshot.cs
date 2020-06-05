@@ -46,6 +46,21 @@ namespace ThanksCardAPI.Migrations
                     b.ToTable("Cards");
                 });
 
+            modelBuilder.Entity("ThanksCardAPI.Models.Class", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Class");
+                });
+
             modelBuilder.Entity("ThanksCardAPI.Models.Department", b =>
                 {
                     b.Property<long>("Id")
@@ -67,6 +82,21 @@ namespace ThanksCardAPI.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("ThanksCardAPI.Models.Question", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("ThanksCardAPI.Models.Role", b =>
