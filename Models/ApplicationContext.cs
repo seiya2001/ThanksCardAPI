@@ -20,6 +20,7 @@ namespace ThanksCardAPI.Models
         public DbSet<Question> Questions { get; set; }
         public DbSet<QandA_Kategory> QandA_Kategorys { get; set; }
         public DbSet<Category> Categorys { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
     }
 }

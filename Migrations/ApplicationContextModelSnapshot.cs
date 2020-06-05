@@ -99,6 +99,21 @@ namespace ThanksCardAPI.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("ThanksCardAPI.Models.Position", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Positions");
+                });
+
             modelBuilder.Entity("ThanksCardAPI.Models.QandA_Kategory", b =>
                 {
                     b.Property<long>("Id")
