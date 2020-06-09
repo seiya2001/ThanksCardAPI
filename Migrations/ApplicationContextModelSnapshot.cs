@@ -219,6 +219,9 @@ namespace ThanksCardAPI.Migrations
                     b.Property<string>("JapaneseName")
                         .HasColumnType("text");
 
+                    b.Property<string>("Mail")
+                        .HasColumnType("text");
+
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
@@ -226,6 +229,9 @@ namespace ThanksCardAPI.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Phone")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
