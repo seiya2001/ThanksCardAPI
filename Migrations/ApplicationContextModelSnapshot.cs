@@ -72,6 +72,21 @@ namespace ThanksCardAPI.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("ThanksCardAPI.Models.HumanPassword", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HumanPasswords");
+                });
+
             modelBuilder.Entity("ThanksCardAPI.Models.Position", b =>
                 {
                     b.Property<long>("Id")

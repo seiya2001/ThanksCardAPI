@@ -21,6 +21,7 @@ namespace ThanksCardAPI.Models
         public DbSet<QandA_Kategory> QandA_Kategorys { get; set; }
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<HumanPassword> HumanPasswords { get; set; }
 
     }
 }
