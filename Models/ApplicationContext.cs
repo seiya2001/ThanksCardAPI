@@ -22,6 +22,7 @@ namespace ThanksCardAPI.Models
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<HumanPassword> HumanPasswords { get; set; }
+        public DbSet<BusinessPassword> BusinessPasswords { get; set; }
 
     }
 }
