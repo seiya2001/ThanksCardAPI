@@ -9,5 +9,6 @@ namespace ThanksCardAPI.Models
     {
         public long Id { get; set; }
         public string Password { get; set; }
+
     }
 }
