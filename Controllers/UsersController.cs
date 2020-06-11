@@ -27,7 +27,9 @@ namespace ThanksCardAPI.Controllers
             // Include を指定することで Department (Department) を同時に取得する。
             return await _context.Users
                                     .Include(User => User.Department)
+                                    .OrderBy(a => a.Id)
                                     .ToListAsync();
+                                    
             //return await _context.Users.ToListAsync();
         }
 
@@ -36,6 +38,7 @@ namespace ThanksCardAPI.Controllers
         public async Task<ActionResult<User>> GetUser(long id)
         {
             var user = await _context.Users.FindAsync(id);
+                
 
             if (user == null)
             {
