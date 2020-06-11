@@ -28,7 +28,8 @@ namespace ThanksCardAPI.Controllers
                                     .Include(ThanksCard => ThanksCard.From)
                                     .Include(ThanksCard => ThanksCard.To)
                                     .Include(ThanksCard => ThanksCard.ThanksCardTags)
-                                        .ThenInclude(ThanksCardTag => ThanksCardTag.Tag)
+                                    .ThenInclude(ThanksCardTag => ThanksCardTag.Tag)
+                                    .OrderByDescending(a => a.CreatedDateTime)
                                     .ToListAsync();
         }
         #endregion
